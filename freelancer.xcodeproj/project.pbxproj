@@ -49,6 +49,7 @@
 		9701EFDD25CD95EA00FE8268 /* freelancerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freelancerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9701EFE125CD95EA00FE8268 /* freelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freelancerUITests.swift; sourceTree = "<group>"; };
 		9701EFE325CD95EA00FE8268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9701EFF225CEA92400FE8268 /* .mockend.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = .mockend.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		9701EFBE25CD95E500FE8268 /* freelancer */ = {
 			isa = PBXGroup;
 			children = (
+				9701EFF225CEA92400FE8268 /* .mockend.json */,
 				9701EFBF25CD95E500FE8268 /* AppDelegate.swift */,
 				9701EFC125CD95E500FE8268 /* SceneDelegate.swift */,
 				9701EFC325CD95E500FE8268 /* ViewController.swift */,

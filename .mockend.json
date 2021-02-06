@@ -1,0 +1,14 @@
+{
+  "Jobs": {
+    "title": "string",
+    "views": "int",
+    "featured": "boolean",
+    "createdAt": "date",
+    "budget": "int",
+    "author": "Author"
+  },
+  "Author": {
+      "name": "string"
+      "spent": "int"
+  }
+}
