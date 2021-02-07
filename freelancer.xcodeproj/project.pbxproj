@@ -15,6 +15,10 @@
 		9701EFCC25CD95E900FE8268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9701EFCA25CD95E900FE8268 /* LaunchScreen.storyboard */; };
 		9701EFD725CD95EA00FE8268 /* freelancerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFD625CD95EA00FE8268 /* freelancerTests.swift */; };
 		9701EFE225CD95EA00FE8268 /* freelancerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFE125CD95EA00FE8268 /* freelancerUITests.swift */; };
+		9701EFF425CEB2E900FE8268 /* UIShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFF325CEB2E900FE8268 /* UIShapes.swift */; };
+		9701EFF925CFD22800FE8268 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFF825CFD22700FE8268 /* RoundedButtons.swift */; };
+		9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFFE25CFE35D00FE8268 /* LinkButton.swift */; };
+		9701F00A25D05BD400FE8268 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9701F00925D05BD400FE8268 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		9701EFE125CD95EA00FE8268 /* freelancerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freelancerUITests.swift; sourceTree = "<group>"; };
 		9701EFE325CD95EA00FE8268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9701EFF225CEA92400FE8268 /* .mockend.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = .mockend.json; sourceTree = SOURCE_ROOT; };
+		9701EFF325CEB2E900FE8268 /* UIShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShapes.swift; sourceTree = "<group>"; };
+		9701EFF825CFD22700FE8268 /* RoundedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
+		9701EFFE25CFE35D00FE8268 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		9701F00925D05BD400FE8268 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +108,13 @@
 		9701EFBE25CD95E500FE8268 /* freelancer */ = {
 			isa = PBXGroup;
 			children = (
+				9701F00425D05B6100FE8268 /* Views */,
+				9701EFFD25CFE33600FE8268 /* Components */,
 				9701EFF225CEA92400FE8268 /* .mockend.json */,
 				9701EFBF25CD95E500FE8268 /* AppDelegate.swift */,
 				9701EFC125CD95E500FE8268 /* SceneDelegate.swift */,
 				9701EFC325CD95E500FE8268 /* ViewController.swift */,
-				9701EFC525CD95E500FE8268 /* Main.storyboard */,
 				9701EFC825CD95E900FE8268 /* Assets.xcassets */,
-				9701EFCA25CD95E900FE8268 /* LaunchScreen.storyboard */,
 				9701EFCD25CD95E900FE8268 /* Info.plist */,
 			);
 			path = freelancer;
@@ -130,6 +138,34 @@
 			path = freelancerUITests;
 			sourceTree = "<group>";
 		};
+		9701EFFD25CFE33600FE8268 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9701EFF325CEB2E900FE8268 /* UIShapes.swift */,
+				9701EFF825CFD22700FE8268 /* RoundedButtons.swift */,
+				9701EFFE25CFE35D00FE8268 /* LinkButton.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		9701F00425D05B6100FE8268 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9701F00825D05B8600FE8268 /* Scenes */,
+				9701EFC525CD95E500FE8268 /* Main.storyboard */,
+				9701EFCA25CD95E900FE8268 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9701F00825D05B8600FE8268 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9701F00925D05BD400FE8268 /* Login.storyboard */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +176,7 @@
 				9701EFB825CD95E500FE8268 /* Sources */,
 				9701EFB925CD95E500FE8268 /* Frameworks */,
 				9701EFBA25CD95E500FE8268 /* Resources */,
+				9701F00E25D087E100FE8268 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9701F00A25D05BD400FE8268 /* Login.storyboard in Resources */,
 				9701EFCC25CD95E900FE8268 /* LaunchScreen.storyboard in Resources */,
 				9701EFC925CD95E900FE8268 /* Assets.xcassets in Resources */,
 				9701EFC725CD95E500FE8268 /* Main.storyboard in Resources */,
@@ -255,14 +293,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9701F00E25D087E100FE8268 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9701EFB825CD95E500FE8268 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9701EFC425CD95E500FE8268 /* ViewController.swift in Sources */,
+				9701EFF925CFD22800FE8268 /* RoundedButtons.swift in Sources */,
 				9701EFC025CD95E500FE8268 /* AppDelegate.swift in Sources */,
+				9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */,
 				9701EFC225CD95E500FE8268 /* SceneDelegate.swift in Sources */,
+				9701EFF425CEB2E900FE8268 /* UIShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
