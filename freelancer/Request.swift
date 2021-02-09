@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Request {
+    var route: String
+    var time: Date
+    var userInfo: [String: Any]
+
+    init(route: String, time: Date) {
+        self.route = route
+        self.time = time
+        userInfo = [:]
+    }
+}

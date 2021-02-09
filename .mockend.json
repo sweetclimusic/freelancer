@@ -5,10 +5,11 @@
     "featured": "boolean",
     "createdAt": "date",
     "budget": "int",
+    "summary": "string",
     "author": "Author"
   },
   "Author": {
-      "name": "string"
+      "name": "string",
       "spent": "int"
   }
 }

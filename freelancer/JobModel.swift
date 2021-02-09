@@ -6,3 +6,38 @@
 //
 
 import Foundation
+
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let jobData = try? newJSONDecoder().decode(JobData.self, from: jsonData)
+
+import Foundation
+
+// MARK: - JobData
+struct JobData: Codable {
+    let jobs: Jobs
+    let author: Author
+
+    enum CodingKeys: String, CodingKey {
+        case jobs = "Jobs"
+        case author = "Author"
+    }
+}
+
+// MARK: - Author
+struct Author: Codable {
+    let name: String
+    let spent: Int
+}
+
+// MARK: - Jobs
+struct Jobs: Codable {
+    let title: String
+    let views: Int
+    let featured: Bool
+    let createdAt: String
+    let budget: Int
+    let summary, author: String
+}
+
