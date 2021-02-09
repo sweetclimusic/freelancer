@@ -19,6 +19,13 @@
 		9701EFF925CFD22800FE8268 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFF825CFD22700FE8268 /* RoundedButtons.swift */; };
 		9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFFE25CFE35D00FE8268 /* LinkButton.swift */; };
 		9701F00A25D05BD400FE8268 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9701F00925D05BD400FE8268 /* Login.storyboard */; };
+		9737972825D3273A00159E11 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737972725D3273A00159E11 /* Request.swift */; };
+		9737973025D3274A00159E11 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737972F25D3274A00159E11 /* UserModel.swift */; };
+		9737973525D3275600159E11 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737973425D3275600159E11 /* JobModel.swift */; };
+		9737973A25D3277F00159E11 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737973925D3277F00159E11 /* Response.swift */; };
+		97E538CC25D1556000748610 /* Subscribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538CB25D1556000748610 /* Subscribe.storyboard */; };
+		97E538D125D1576C00748610 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538D025D1576C00748610 /* Profile.storyboard */; };
+		97E538D625D1578F00748610 /* Jobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538D525D1578F00748610 /* Jobs.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,13 @@
 		9701EFF825CFD22700FE8268 /* RoundedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
 		9701EFFE25CFE35D00FE8268 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		9701F00925D05BD400FE8268 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9737972725D3273A00159E11 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		9737972F25D3274A00159E11 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9737973425D3275600159E11 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		9737973925D3277F00159E11 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		97E538CB25D1556000748610 /* Subscribe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscribe.storyboard; sourceTree = "<group>"; };
+		97E538D025D1576C00748610 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		97E538D525D1578F00748610 /* Jobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Jobs.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +122,7 @@
 		9701EFBE25CD95E500FE8268 /* freelancer */ = {
 			isa = PBXGroup;
 			children = (
+				9737972625D3271F00159E11 /* Models */,
 				9701F00425D05B6100FE8268 /* Views */,
 				9701EFFD25CFE33600FE8268 /* Components */,
 				9701EFF225CEA92400FE8268 /* .mockend.json */,
@@ -162,8 +177,22 @@
 			isa = PBXGroup;
 			children = (
 				9701F00925D05BD400FE8268 /* Login.storyboard */,
+				97E538CB25D1556000748610 /* Subscribe.storyboard */,
+				97E538D025D1576C00748610 /* Profile.storyboard */,
+				97E538D525D1578F00748610 /* Jobs.storyboard */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		9737972625D3271F00159E11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9737972725D3273A00159E11 /* Request.swift */,
+				9737972F25D3274A00159E11 /* UserModel.swift */,
+				9737973425D3275600159E11 /* JobModel.swift */,
+				9737973925D3277F00159E11 /* Response.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E538D125D1576C00748610 /* Profile.storyboard in Resources */,
 				9701F00A25D05BD400FE8268 /* Login.storyboard in Resources */,
 				9701EFCC25CD95E900FE8268 /* LaunchScreen.storyboard in Resources */,
 				9701EFC925CD95E900FE8268 /* Assets.xcassets in Resources */,
+				97E538CC25D1556000748610 /* Subscribe.storyboard in Resources */,
+				97E538D625D1578F00748610 /* Jobs.storyboard in Resources */,
 				9701EFC725CD95E500FE8268 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,8 +352,12 @@
 			files = (
 				9701EFC425CD95E500FE8268 /* ViewController.swift in Sources */,
 				9701EFF925CFD22800FE8268 /* RoundedButtons.swift in Sources */,
+				9737973525D3275600159E11 /* JobModel.swift in Sources */,
+				9737973025D3274A00159E11 /* UserModel.swift in Sources */,
+				9737973A25D3277F00159E11 /* Response.swift in Sources */,
 				9701EFC025CD95E500FE8268 /* AppDelegate.swift in Sources */,
 				9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */,
+				9737972825D3273A00159E11 /* Request.swift in Sources */,
 				9701EFC225CD95E500FE8268 /* SceneDelegate.swift in Sources */,
 				9701EFF425CEB2E900FE8268 /* UIShapes.swift in Sources */,
 			);

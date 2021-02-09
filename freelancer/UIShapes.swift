@@ -8,39 +8,33 @@
 import Foundation
 import UIKit
 
-struct ShapeLayer {
-    var color: UIColor = .black
-    var bounds: CGRect = CGRect.zero
-    var position: CGPoint = CGPoint.zero
-    var clipToBounds:Bool = true
-    var value: CALayer {
-        get {
-            let layer = CALayer()
-            layer.backgroundColor = color.cgColor
-            layer.bounds = bounds
-            layer.position = position
-            return layer
-        }
-    }
-}
 protocol UIShapeLayerProtocol {
     func makeShape()
+}
+struct UIAPPConstants {
+    static let DefaultLogoSize: Int = 64
 }
 // Half circle
 @IBDesignable
 class HalfCircle: UIView, UIShapeLayerProtocol {
     var shadowLayer: CALayer = CALayer()
     var shapeLayer: CAShapeLayer = CAShapeLayer()
-    @IBInspectable var layerColor: UIColor = .black {
+    @IBInspectable var layerColor: UIColor = UIColor.black {
         didSet {
             makeShape()
         }
     }
+    
+    // MARK: default right facing
+    @IBInspectable var startAngleFromRadians: CGFloat = .pi * 1.5
+    @IBInspectable var endAngleFromRadians: CGFloat = .pi / 2
+    @IBInspectable var clockWise: Bool = true
     @IBInspectable var enableShadow: Bool = true {
         didSet {
             makeShape()
         }
     }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         makeShape()
@@ -53,11 +47,11 @@ class HalfCircle: UIView, UIShapeLayerProtocol {
 
     func makeShape() {
         let myView = self
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0),
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0, y: self.bounds.midY),
                                       radius: self.bounds.midY,
-                                      startAngle: .pi * 1.5,
-                                      endAngle: .pi / 2,
-                                      clockwise: true)
+                                      startAngle: self.startAngleFromRadians,
+                                      endAngle: self.endAngleFromRadians,
+                                      clockwise: self.clockWise)
         shapeLayer.path = circlePath.cgPath
         shapeLayer.fillColor = layerColor.cgColor
         shapeLayer.strokeColor = UIColor.black.cgColor
@@ -65,10 +59,10 @@ class HalfCircle: UIView, UIShapeLayerProtocol {
         // shadowPath
         if enableShadow {
             let layer = self.layer
-            let shadowPath = UIBezierPath(arcCenter: CGPoint(x: self.bounds.midY * 0.1, y: 0),
+            let shadowPath = UIBezierPath(arcCenter: CGPoint(x: self.bounds.midY * 0.1, y: self.bounds.midY),
                                           radius: self.bounds.midY,
-                                          startAngle: .pi * 1.5,
-                                          endAngle: .pi / 2,
+                                          startAngle: self.startAngleFromRadians,
+                                          endAngle: self.endAngleFromRadians,
                                           clockwise: true)
             layer.shadowPath = shadowPath.cgPath
             layer.shadowOffset = .zero
@@ -89,7 +83,7 @@ class Rhombus: UIView, UIShapeLayerProtocol {
             makeShape()
         }
     }
-    @IBInspectable var layerColor: UIColor = UIColor(named: "AppRed") ?? UIColor.red{
+    @IBInspectable var layerColor: UIColor = UIColor(named: "AppRed") ?? UIColor.red {
         didSet {
             makeShape()
         }
