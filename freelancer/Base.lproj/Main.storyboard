@@ -26,9 +26,6 @@
                                     <constraint firstAttribute="width" secondItem="aCs-y9-Qae" secondAttribute="height" multiplier="1:2" id="iaI-uO-gwH"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" systemColor="labelColor"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="layerColor">
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
@@ -60,12 +57,12 @@
                                                 <color key="textColor" name="AccentGrey"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g12-8L-ugZ" userLabel="Millions of people use freelancer to turn their ideas to reality.">
-                                                <rect key="frame" x="0.0" y="27.5" width="282.5" height="170.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g12-8L-ugZ" userLabel="Millions of people use freelancer to turn their ideas to reality.">
+                                                <rect key="frame" x="0.0" y="27.5" width="320" height="170.5"/>
                                                 <string key="text">Millions of people use
 freelancer to turn their
 ideas to reality.</string>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>

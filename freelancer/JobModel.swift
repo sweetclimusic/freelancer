@@ -15,7 +15,7 @@ import Foundation
 import Foundation
 
 // MARK: - JobData
-struct JobData: Codable {
+public struct JobData: Codable {
     let jobs: Jobs
     let author: Author
 
@@ -26,13 +26,13 @@ struct JobData: Codable {
 }
 
 // MARK: - Author
-struct Author: Codable {
+public struct Author: Codable {
     let name: String
     let spent: Int
 }
 
 // MARK: - Jobs
-struct Jobs: Codable {
+public struct Jobs: Codable {
     let title: String
     let views: Int
     let featured: Bool
@@ -40,4 +40,3 @@ struct Jobs: Codable {
     let budget: Int
     let summary, author: String
 }
-

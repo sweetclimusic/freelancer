@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - UserData
-struct UserData: Codable {
+public struct UserData: Codable {
     let profile: Profile
     let summary: Summary
 
@@ -19,7 +19,7 @@ struct UserData: Codable {
 }
 
 // MARK: - Profile
-struct Profile: Codable {
+public struct Profile: Codable {
     let firstName, surnameName, email: String
     let pro: Bool
     let budget: Int
@@ -27,6 +27,10 @@ struct Profile: Codable {
 }
 
 // MARK: - Summary
-struct Summary: Codable {
+public struct Summary: Codable {
     let applied, reviewed, contacted: Int
+}
+/// Delegate protocol used to recieve userData from previous viewController when using segues
+protocol UserDataReceivingDelegateProtocol {
+    func userDataReceiver(userData: UserData)
 }

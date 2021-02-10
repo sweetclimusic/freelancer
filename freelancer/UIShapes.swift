@@ -24,7 +24,6 @@ class HalfCircle: UIView, UIShapeLayerProtocol {
             makeShape()
         }
     }
-    
     // MARK: default right facing
     @IBInspectable var startAngleFromRadians: CGFloat = .pi * 1.5
     @IBInspectable var endAngleFromRadians: CGFloat = .pi / 2
@@ -54,7 +53,7 @@ class HalfCircle: UIView, UIShapeLayerProtocol {
                                       clockwise: self.clockWise)
         shapeLayer.path = circlePath.cgPath
         shapeLayer.fillColor = layerColor.cgColor
-        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.strokeColor = layerColor.cgColor
         shapeLayer.lineWidth = 1
         // shadowPath
         if enableShadow {
