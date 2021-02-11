@@ -6,7 +6,7 @@
     "createdAt": "date",
     "budget": "int",
     "summary": "string",
-    "author": "Author"
+    "author": "Authors[]"
   },
   "Author": {
       "name": "string",
