@@ -1,14 +1,14 @@
 {
-  "Jobs": {
+  "Post": {
     "title": "string",
     "views": "int",
     "featured": "boolean",
     "createdAt": "date",
     "budget": "int",
     "summary": "string",
-    "author": "Authors[]"
+    "comment": "Comments[]"
   },
-  "Author": {
+  "Comment": {
       "name": "string",
       "spent": "int"
   }
