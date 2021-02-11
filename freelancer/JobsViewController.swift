@@ -8,13 +8,14 @@
 import UIKit
 
 class JobsViewController: UIViewController {
-    var userDataDelegate: UserDataReceivingDelegateProtocol? = nil
+    weak var userDataDelegate: UserDataReceivingDelegateProtocol?
+    private var authorizedUserData: UserData?
+    private var isLoggedIn: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -26,4 +27,10 @@ class JobsViewController: UIViewController {
     }
     */
 
+}
+extension JobsViewController: UserDataReceivingDelegateProtocol {
+    func userDataReceiver(userData: UserData) {
+        self.authorizedUserData = userData
+        isLoggedIn = true
+    }
 }

@@ -13,5 +13,5 @@ public protocol ClientRequestProtocol {
          
          - Returns: A  UserData model
      */
-    func loginRequest(userData: [String], resultHandler: @escaping(UserData)->Void)
+    func loginRequest(userData: [String], resultHandler: @escaping(UserData) -> Void)
 }

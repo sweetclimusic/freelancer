@@ -14,5 +14,5 @@ public protocol JobRequestProtocol {
          - filters: additional filters to query on the job request
      - Returns: A  array of Jobs
      */
-    func getJobs( limit:Int,filters:[String]?, resultHandler: @escaping ([JobData]) -> Void)
+    func getJobs( limit: Int, filters: [String]?, resultHandler: @escaping ([JobData]) -> Void)
 }

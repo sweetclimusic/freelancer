@@ -29,21 +29,20 @@ class ClientRequest {
     """
     private var decoder: JSONDecoder
     var userInfo: [String: Any] = [:]
-    //basic init as we don't have routes
+    // basic init as we don't have routes
     init(decoder: JSONDecoder) {
         self.decoder = decoder
         userInfo = [:]
     }
-    
 }
-// MARK - Computed property to store session data to signify a logged in user.
+
+// MARK: - Computed property to store session data to signify a logged in user.
 extension ClientRequest {
     private var sessionKey: String { return "@@SESSION"}
-    var session: [String: String]  {
+    var session: [String: String] {
         get {
-            return userInfo[sessionKey] as? [String:String] ?? [:]
+            return userInfo[sessionKey] as? [String: String] ?? [:]
         }
-        
         set {
             userInfo[sessionKey] = newValue
         }
@@ -51,13 +50,13 @@ extension ClientRequest {
 }
 
 extension ClientRequest: ClientRequestProtocol {
-    
+
     func loginRequest(userData: [String], resultHandler: @escaping (UserData) -> Void) {
         let url = URL(string: ClientRequest.baseUrl)!
         let urlRequest = URLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: urlRequest){(data, response, error) in
-            //Mock NSURLSessionTask POST Request donothing but return true creating a new UserData object
+
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, _, _) in
+            // Mock NSURLSessionTask POST Request donothing but return true creating a new UserData object
             do {
                 let data = try self.decoder.decode(UserData.self, from: Data(ClientRequest.mockJson.utf8))
                     DispatchQueue.main.async {
@@ -70,5 +69,5 @@ extension ClientRequest: ClientRequestProtocol {
         }
         task.resume()
     }
-    
+
 }

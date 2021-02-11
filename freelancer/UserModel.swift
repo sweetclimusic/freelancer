@@ -31,6 +31,6 @@ public struct Summary: Codable {
     let applied, reviewed, contacted: Int
 }
 /// Delegate protocol used to recieve userData from previous viewController when using segues
-protocol UserDataReceivingDelegateProtocol {
+protocol UserDataReceivingDelegateProtocol: class {
     func userDataReceiver(userData: UserData)
 }
