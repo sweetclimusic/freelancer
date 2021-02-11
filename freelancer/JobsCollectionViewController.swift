@@ -1,5 +1,5 @@
 //
-//  JobsViewController.swift
+//  JobsCollectionViewController.swift
 //  freelancer
 //
 //  Created by Ashlee Muscroft on 10/02/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JobsViewController: UIViewController {
+class JobsCollectionViewController: UICollectionViewController {
     weak var userDataDelegate: UserDataReceivingDelegateProtocol?
     private var authorizedUserData: UserData?
     private var isLoggedIn: Bool = false
@@ -28,7 +28,7 @@ class JobsViewController: UIViewController {
     */
 
 }
-extension JobsViewController: UserDataReceivingDelegateProtocol {
+extension JobsCollectionViewController: UserDataReceivingDelegateProtocol {
     func userDataReceiver(userData: UserData) {
         self.authorizedUserData = userData
         isLoggedIn = true

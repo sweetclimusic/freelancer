@@ -26,16 +26,22 @@ class LoginViewController: UIViewController {
         self.txtPassword.delegate = self
         // register targets
         contentView.addTarget(self, action: #selector(self.dismissKeyboard), for: .touchUpInside)
-        btnLogin.addTarget(self, action: #selector(self.login), for: .touchUpInside)
+        btnLogin.addTarget(self, action: #selector(self.submitLogin), for: .touchUpInside)
         // Do any additional setup after loading the view.
         registerForKeyboardNotifications()
     }
 
-    func submitLogin() {
+    @objc func submitLogin(_ performSegue: Bool = false) {
         guard let request = clientRequest else { return }
         request.loginRequest(userData: ["johndoe", "password"], resultHandler: { [weak self] userData in
             self?.clientRequest?.session = ["username": "johndoe"]
             self?.authorizedUser = userData
+            // submitLogin called programmatically
+            if performSegue {
+                DispatchQueue.main.async {
+                    self?.performSegue(withIdentifier: "login", sender: self)
+                }
+            }
         })
     }
 
@@ -47,15 +53,13 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // skiped or logged in, navigate to jobs
-        let destination = segue.destination as? JobsViewController
+        let destination = segue.destination as? JobsCollectionViewController
         // Pass the selected object to the new view controller.
         if authorizedUser != nil {
             destination?.userDataDelegate?.userDataReceiver(userData: authorizedUser!)
         }
     }
 
-    @objc func login() {
-    }
 }
 // MARK: Keyboard handling control functions
 extension LoginViewController {
@@ -98,7 +102,7 @@ extension LoginViewController: UITextFieldDelegate {
         // user submitted via "go" return key
         if activeTextField == txtPassword {
             dismissKeyboard()
-            login()
+            submitLogin(true)
             return false
         }
         let nextTag = textField.tag + 1

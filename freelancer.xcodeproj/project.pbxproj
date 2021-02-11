@@ -26,7 +26,7 @@
 		9737975325D3E9B200159E11 /* JobRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737975225D3E9B200159E11 /* JobRequestProtocol.swift */; };
 		9737975825D3E9CE00159E11 /* JobRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737975725D3E9CE00159E11 /* JobRequest.swift */; };
 		9737976425D4613A00159E11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737976325D4613A00159E11 /* LoginViewController.swift */; };
-		9737976F25D4927D00159E11 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737976E25D4927D00159E11 /* JobsViewController.swift */; };
+		9737976F25D4927D00159E11 /* JobsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737976E25D4927D00159E11 /* JobsCollectionViewController.swift */; };
 		97E538CC25D1556000748610 /* Subscribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538CB25D1556000748610 /* Subscribe.storyboard */; };
 		97E538D125D1576C00748610 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538D025D1576C00748610 /* Profile.storyboard */; };
 		97E538D625D1578F00748610 /* Jobs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E538D525D1578F00748610 /* Jobs.storyboard */; };
@@ -76,7 +76,7 @@
 		9737975225D3E9B200159E11 /* JobRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRequestProtocol.swift; sourceTree = "<group>"; };
 		9737975725D3E9CE00159E11 /* JobRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRequest.swift; sourceTree = "<group>"; };
 		9737976325D4613A00159E11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9737976E25D4927D00159E11 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		9737976E25D4927D00159E11 /* JobsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewController.swift; sourceTree = "<group>"; };
 		97E538CB25D1556000748610 /* Subscribe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Subscribe.storyboard; sourceTree = "<group>"; };
 		97E538D025D1576C00748610 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		97E538D525D1578F00748610 /* Jobs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Jobs.storyboard; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 			children = (
 				9701EFC325CD95E500FE8268 /* ViewController.swift */,
 				9737976325D4613A00159E11 /* LoginViewController.swift */,
-				9737976E25D4927D00159E11 /* JobsViewController.swift */,
+				9737976E25D4927D00159E11 /* JobsCollectionViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				9701EFC225CD95E500FE8268 /* SceneDelegate.swift in Sources */,
 				9737974625D3753500159E11 /* ClientRequestProtocol.swift in Sources */,
 				9737976425D4613A00159E11 /* LoginViewController.swift in Sources */,
-				9737976F25D4927D00159E11 /* JobsViewController.swift in Sources */,
+				9737976F25D4927D00159E11 /* JobsCollectionViewController.swift in Sources */,
 				9701EFF425CEB2E900FE8268 /* UIShapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

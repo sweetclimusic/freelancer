@@ -8,24 +8,22 @@
 import Foundation
 
 class ClientRequest {
-    private static let baseUrl = "127.0.0.1"
+    private static let baseUrl = "https://google.com"
     private static let mockJson = """
-    [
-        {
+    {
             "Profile": {
                 "firstName": "Ashlee",
                 "surnameName": "Muscroft",
                 "email": "ashleetheprogrammer@gmail.com",
-                "pro": "false",
+                "pro": false,
                 "summary": "Summary"
             },
             "Summary" : {
-                "applied": "28",
-                "reviewed": "73",
-                "contacted": "18"
+                "applied": 28,
+                "reviewed": 73,
+                "contacted": 18
                 }
        }
-    ]
     """
     private var decoder: JSONDecoder
     var userInfo: [String: Any] = [:]
@@ -57,14 +55,16 @@ extension ClientRequest: ClientRequestProtocol {
 
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, _, _) in
             // Mock NSURLSessionTask POST Request donothing but return true creating a new UserData object
+            let data = Data(ClientRequest.mockJson.utf8)
             do {
-                let data = try self.decoder.decode(UserData.self, from: Data(ClientRequest.mockJson.utf8))
+                let userResponse = try self.decoder.decode(UserData.self, from: data)
                     DispatchQueue.main.async {
-                        resultHandler(data)
-                        print(data)
+                        print(userResponse)
+                        resultHandler(userResponse)
+
                     }
             } catch {
-                fatalError("No mockUser Data")
+                fatalError("No mockUser Data: \(error)")
             }
         }
         task.resume()

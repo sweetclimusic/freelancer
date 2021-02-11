@@ -22,7 +22,6 @@ public struct UserData: Codable {
 public struct Profile: Codable {
     let firstName, surnameName, email: String
     let pro: Bool
-    let budget: Int
     let summary: String
 }
 

@@ -133,7 +133,6 @@ Login Now.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginAction:" destination="X6F-ye-mBM" eventType="touchUpInside" id="uFn-gS-ZTY"/>
                                             <segue destination="JOf-KB-MRg" kind="showDetail" identifier="login" id="Qby-is-fTD"/>
                                         </connections>
                                     </button>
