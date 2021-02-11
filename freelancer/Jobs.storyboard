@@ -11,7 +11,7 @@
         <!--JobsBoard-->
         <scene sceneID="fNV-zP-C0E">
             <objects>
-                <collectionViewController storyboardIdentifier="JobBoardCollectionView" title="JobsBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0lP-cv-C1l" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="JobBoardCollectionView" title="JobsBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0lP-cv-C1l" customClass="JobsCollectionViewController" customModule="freelancer" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0D9-GE-Ikg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,11 +37,26 @@
                             <outlet property="delegate" destination="0lP-cv-C1l" id="h1g-qW-Deb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="2bI-hD-bgI"/>
+                    <navigationItem key="navigationItem" id="2bI-hD-bgI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="BLE-yb-41f"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Q0F-al-Xm0" kind="show" identifier="profile" id="D6q-H2-85P"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02M-kI-IuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="71.651785714285708"/>
+        </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="JPW-fL-qFW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileScene" storyboardName="Profile" referencedIdentifier="ProfileViewController" id="Q0F-al-Xm0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OpJ-tm-5wt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGn-69-7aM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="70"/>
         </scene>
         <!--Jobs-->
         <scene sceneID="t1Y-DW-vMs">

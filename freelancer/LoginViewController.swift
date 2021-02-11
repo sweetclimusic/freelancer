@@ -53,10 +53,11 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // skiped or logged in, navigate to jobs
-        let destination = segue.destination as? JobsCollectionViewController
+        let destinationNav = segue.destination as? UINavigationController
+        let destination = destinationNav?.viewControllers.first as? JobsCollectionViewController
         // Pass the selected object to the new view controller.
         if authorizedUser != nil {
-            destination?.userDataDelegate?.userDataReceiver(userData: authorizedUser!)
+            destination?.setUserData(userData: authorizedUser!)
         }
     }
 

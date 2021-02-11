@@ -99,7 +99,7 @@ ideas to reality.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="7Ec-74-Ah9" kind="show" id="h1h-zz-1aZ"/>
+                                            <segue destination="7Ec-74-Ah9" kind="presentation" id="h1h-zz-1aZ"/>
                                         </connections>
                                     </button>
                                 </subviews>

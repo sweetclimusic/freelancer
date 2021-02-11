@@ -119,8 +119,8 @@ Login Now.</string>
                                     <constraint firstItem="OGM-8t-Xxx" firstAttribute="leading" secondItem="7W8-kB-MaR" secondAttribute="leading" constant="20" symbolic="YES" id="vqp-dc-k3o"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-0g-OzX" userLabel="ButtonStackView">
-                                <rect key="frame" x="32" y="519" width="311" height="84"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-0g-OzX" userLabel="ButtonStackView">
+                                <rect key="frame" x="32" y="511" width="311" height="92"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKq-2P-ulN" userLabel="Login" customClass="RoundedButtons" customModule="freelancer" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="271" height="34"/>
@@ -133,16 +133,16 @@ Login Now.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="JOf-KB-MRg" kind="showDetail" identifier="login" id="Qby-is-fTD"/>
+                                            <segue destination="JOf-KB-MRg" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Qby-is-fTD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AA-LO-BtP" userLabel="Skip Now" customClass="LinkButton" customModule="freelancer" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="50" width="271" height="34"/>
+                                        <rect key="frame" x="20" y="58" width="271" height="34"/>
                                         <state key="normal" title="Skip Now">
                                             <color key="titleColor" name="AccentGrey"/>
                                         </state>
                                         <connections>
-                                            <segue destination="JOf-KB-MRg" kind="show" identifier="skipLogin" id="Nci-Ri-Sf0"/>
+                                            <segue destination="JOf-KB-MRg" kind="presentation" identifier="skipLogin" modalPresentationStyle="fullScreen" id="Nci-Ri-Sf0"/>
                                         </connections>
                                     </button>
                                 </subviews>
