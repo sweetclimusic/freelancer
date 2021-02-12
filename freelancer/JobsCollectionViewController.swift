@@ -20,7 +20,7 @@ class JobsCollectionViewController: UICollectionViewController {
     func configureToolBar() {
         if isLoggedIn {
             if let profileImage = UIImage(named: "profile") {
-                let profileView = UIAction(title: "") { [weak self] action in
+                let profileView = UIAction(title: "") { [weak self] _ in
                         self?.performSegue(withIdentifier: "profile", sender: self)
                     }
                 let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
@@ -42,7 +42,7 @@ class JobsCollectionViewController: UICollectionViewController {
                 image: UIImage(systemName: "person.crop.circle"),
                 style: .plain,
                 target: self,
-                action:#selector(signin))
+                action: #selector(signin))
         }
     }
     @objc func signin() {
@@ -60,8 +60,14 @@ class JobsCollectionViewController: UICollectionViewController {
             return true
         }
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profile" {
+            guard let profileVC = segue.destination as? ProfileViewController else { return }
+            profileVC.profileData = authorizedUserData
+        }
+    }
 }
+
 extension JobsCollectionViewController {
     func setUserData(userData: UserData) {
         self.authorizedUserData = userData

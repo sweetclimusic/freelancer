@@ -10,6 +10,10 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var lblTotalContacted: UILabel!
+    @IBOutlet weak var lblTotalReviewed: UILabel!
+    @IBOutlet weak var lblTotalApplied: UILabel!
+    var profileData: UserData?
     var signoutAction: UIAction!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,7 @@ class ProfileViewController: UIViewController {
             handler: { [weak self] _ in
                 self?.performSegue(withIdentifier: "signout", sender: self)
             })
+        setProfileData()
         configureToolBar()
         configureProfileImage()
         // Do any additional setup after loading the view.
@@ -33,7 +38,7 @@ class ProfileViewController: UIViewController {
         leftBarButton.addAction(UIAction(
                                     handler: { [weak self] _ in
                                         self?.navigationController?.popViewController(animated: true)
-                                    }),for: .touchUpInside)
+                                    }), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarButton)
 
         // MARK: rightBarButton, build a UIMenu with a signout option
@@ -51,6 +56,12 @@ class ProfileViewController: UIViewController {
         profileImageView.clipsToBounds = true
     }
 
+    func setProfileData() {
+        guard let profileData = self.profileData else { return }
+        lblTotalContacted.text = String(profileData.summary.contacted)
+        lblTotalReviewed.text = String(profileData.summary.reviewed)
+        lblTotalApplied.text = String(profileData.summary.applied)
+    }
     /*
     // MARK: - Navigation
 

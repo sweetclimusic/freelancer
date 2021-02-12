@@ -303,6 +303,9 @@ Left</string>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="lblTotalApplied" destination="83P-GK-NAg" id="QdH-2J-arm"/>
+                        <outlet property="lblTotalContacted" destination="pc4-V6-ffF" id="F1h-oS-ein"/>
+                        <outlet property="lblTotalReviewed" destination="KBc-eF-kgP" id="aHt-JJ-J8n"/>
                         <outlet property="profileImageView" destination="k3x-EI-pXS" id="GBO-ze-99g"/>
                         <segue destination="Qyg-8I-jyH" kind="presentation" identifier="signout" modalPresentationStyle="fullScreen" id="OqX-Fa-zgn"/>
                     </connections>
