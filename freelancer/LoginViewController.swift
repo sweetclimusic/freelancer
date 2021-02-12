@@ -36,31 +36,32 @@ class LoginViewController: UIViewController {
         request.loginRequest(userData: ["johndoe", "password"], resultHandler: { [weak self] userData in
             self?.clientRequest?.session = ["username": "johndoe"]
             self?.authorizedUser = userData
-            // submitLogin called programmatically
-            if performSegue {
-                DispatchQueue.main.async {
-                    self?.performSegue(withIdentifier: "login", sender: self)
-                }
+            DispatchQueue.main.async {
+                self?.performAuthorizeLogin()
             }
         })
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-     */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // skiped or logged in, navigate to jobs
-        let destinationNav = segue.destination as? UINavigationController
-        let destination = destinationNav?.viewControllers.first as? JobsCollectionViewController
+    // MARK: manual navigation handling due to the async nature of the login request
+    func performAuthorizeLogin() {
+        // Get the navview controller using the storyBoard Reference
+        let storyBoard = UIStoryboard(name: "Jobs", bundle: nil)
+        guard let destinationNav = storyBoard.instantiateViewController(
+                identifier: "JobsNavigationController") as? UINavigationController
+        else {
+            return
+        }
+        destinationNav.modalPresentationStyle = .fullScreen
+        guard let destination = destinationNav.viewControllers.first as? JobsCollectionViewController
+        else {
+            return
+        }
         // Pass the selected object to the new view controller.
-        if authorizedUser != nil {
-            destination?.setUserData(userData: authorizedUser!)
+        if self.authorizedUser != nil {
+            destination.setUserData(userData: authorizedUser!)
+            self.present(destinationNav, animated: true)
         }
     }
-
 }
 // MARK: Keyboard handling control functions
 extension LoginViewController {
@@ -109,7 +110,7 @@ extension LoginViewController: UITextFieldDelegate {
         let nextTag = textField.tag + 1
         // jump to next textField in VC
         if let nextTextField = textField.superview?.viewWithTag(nextTag) {
-                nextTextField.becomeFirstResponder()
+            nextTextField.becomeFirstResponder()
         } else {
             resignFirstResponder()
         }

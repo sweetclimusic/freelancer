@@ -20,6 +20,8 @@
 		9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701EFFE25CFE35D00FE8268 /* LinkButton.swift */; };
 		9701F00A25D05BD400FE8268 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9701F00925D05BD400FE8268 /* Login.storyboard */; };
 		97301B6325D594A0003325A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97301B6225D594A0003325A6 /* ProfileViewController.swift */; };
+		97301B6B25D5FF20003325A6 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97301B6A25D5FF20003325A6 /* RoundedView.swift */; };
+		97301B7025D5FFDE003325A6 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97301B6F25D5FFDE003325A6 /* RoundedImageView.swift */; };
 		9737973025D3274A00159E11 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737972F25D3274A00159E11 /* UserModel.swift */; };
 		9737973525D3275600159E11 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737973425D3275600159E11 /* JobModel.swift */; };
 		9737974625D3753500159E11 /* ClientRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9737974525D3753500159E11 /* ClientRequestProtocol.swift */; };
@@ -71,6 +73,8 @@
 		9701EFFE25CFE35D00FE8268 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		9701F00925D05BD400FE8268 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		97301B6225D594A0003325A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		97301B6A25D5FF20003325A6 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		97301B6F25D5FFDE003325A6 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		9737972F25D3274A00159E11 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9737973425D3275600159E11 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		9737974525D3753500159E11 /* ClientRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequestProtocol.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				9701EFF325CEB2E900FE8268 /* UIShapes.swift */,
 				9701EFF825CFD22700FE8268 /* RoundedButtons.swift */,
 				9701EFFE25CFE35D00FE8268 /* LinkButton.swift */,
+				97301B6A25D5FF20003325A6 /* RoundedView.swift */,
+				97301B6F25D5FFDE003325A6 /* RoundedImageView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -389,6 +395,8 @@
 				9737975325D3E9B200159E11 /* JobRequestProtocol.swift in Sources */,
 				97301B6325D594A0003325A6 /* ProfileViewController.swift in Sources */,
 				9737975825D3E9CE00159E11 /* JobRequest.swift in Sources */,
+				97301B6B25D5FF20003325A6 /* RoundedView.swift in Sources */,
+				97301B7025D5FFDE003325A6 /* RoundedImageView.swift in Sources */,
 				9737974E25D3E86C00159E11 /* ClientRequest.swift in Sources */,
 				9701EFFF25CFE35D00FE8268 /* LinkButton.swift in Sources */,
 				9701EFC225CD95E500FE8268 /* SceneDelegate.swift in Sources */,

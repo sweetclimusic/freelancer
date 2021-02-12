@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Remove shadows from UINavigationBars across the app.
         let standard = UINavigationBarAppearance()
         standard.configureWithTransparentBackground()
-        standard.backgroundColor = .white
-        standard.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = standard
         UINavigationBar.appearance().scrollEdgeAppearance = standard
+        UINavigationBar.appearance().tintColor = .black
+
         return true
     }
 

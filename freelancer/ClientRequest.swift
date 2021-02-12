@@ -59,7 +59,6 @@ extension ClientRequest: ClientRequestProtocol {
             do {
                 let userResponse = try self.decoder.decode(UserData.self, from: data)
                     DispatchQueue.main.async {
-                        print(userResponse)
                         resultHandler(userResponse)
 
                     }

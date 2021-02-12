@@ -20,8 +20,11 @@ class JobsCollectionViewController: UICollectionViewController {
     func configureToolBar() {
         if isLoggedIn {
             if let profileImage = UIImage(named: "profile") {
+                let profileView = UIAction(title: "") { [weak self] action in
+                        self?.performSegue(withIdentifier: "profile", sender: self)
+                    }
                 let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-                rightButton.addTarget(self, action: #selector(viewProfile), for: .touchUpInside)
+                rightButton.addAction(profileView, for: .touchUpInside)
 
                 // fill button content with a image and circl mask
                 let profileImageView = UIImageView(image: profileImage)
@@ -32,22 +35,19 @@ class JobsCollectionViewController: UICollectionViewController {
                 profileImageView.layer.masksToBounds = true
                 rightButton.addSubview(profileImageView)
 
-                self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightButton)
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
             }
         } else {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(
                 image: UIImage(systemName: "person.crop.circle"),
                 style: .plain,
                 target: self,
-                action: nil)
+                action:#selector(signin))
         }
     }
-    @objc func viewProfile() {
-        if isLoggedIn {
-          self.performSegue(withIdentifier: "profile", sender: self)
-        }
+    @objc func signin() {
+        self.performSegue(withIdentifier: "signin", sender: self)
     }
-
     /*
     // MARK: - Navigation
 
@@ -64,7 +64,6 @@ class JobsCollectionViewController: UICollectionViewController {
 }
 extension JobsCollectionViewController {
     func setUserData(userData: UserData) {
-        print("recieved: \(userData)")
         self.authorizedUserData = userData
         self.isLoggedIn = true
     }

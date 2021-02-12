@@ -42,11 +42,20 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Q0F-al-Xm0" kind="show" identifier="profile" id="D6q-H2-85P"/>
+                        <segue destination="myS-Iz-ZKF" kind="presentation" identifier="signin" modalPresentationStyle="fullScreen" id="Rmy-9c-4lT"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02M-kI-IuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="71.651785714285708"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="VIi-br-bvU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="myS-Iz-ZKF" userLabel="Login" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wat-Tp-5XO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="-71"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="JPW-fL-qFW">

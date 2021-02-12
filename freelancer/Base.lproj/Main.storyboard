@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="SubscriptionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="freelancer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="aCs-y9-Qae" customClass="HalfCircle" customModule="freelancer" customModuleProvider="target">
-                                <rect key="frame" x="32" y="80" width="32" height="64"/>
+                                <rect key="frame" x="32" y="36" width="32" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="4aR-Sx-ADj"/>
                                     <constraint firstAttribute="height" constant="64" id="9Ft-TZ-gWt"/>
@@ -32,13 +32,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vMM-nn-Qus" userLabel="ContentView">
-                                <rect key="frame" x="32" y="144" width="350" height="622"/>
+                                <rect key="frame" x="32" y="100" width="311" height="471"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="MSq-ay-nyH">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="214.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-Ce-bdN">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="214.5"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -49,7 +49,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kLl-rf-9Sw" userLabel="TextStackView">
-                                        <rect key="frame" x="0.0" y="424" width="350" height="198"/>
+                                        <rect key="frame" x="0.0" y="238.5" width="311" height="232.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Get Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3N3-ne-gjf">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="19.5"/>
@@ -58,7 +58,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g12-8L-ugZ" userLabel="Millions of people use freelancer to turn their ideas to reality.">
-                                                <rect key="frame" x="0.0" y="27.5" width="320" height="170.5"/>
+                                                <rect key="frame" x="0.0" y="27.5" width="311" height="205"/>
                                                 <string key="text">Millions of people use
 freelancer to turn their
 ideas to reality.</string>
@@ -66,6 +66,9 @@ ideas to reality.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="g12-8L-ugZ" secondAttribute="trailing" id="7Ps-tR-jCg"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -75,7 +78,7 @@ ideas to reality.</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="bottom" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Eie-md-LQD" userLabel="ButtonStackView">
-                                <rect key="frame" x="32" y="798" width="334" height="34"/>
+                                <rect key="frame" x="32" y="603" width="295" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="i6y-O1-fk4" userLabel="skipBtn" customClass="LinkButton" customModule="freelancer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="69" height="32"/>
@@ -89,7 +92,7 @@ ideas to reality.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHW-aj-EZa" userLabel="nextBtn" customClass="RoundedButtons" customModule="freelancer" customModuleProvider="target">
-                                        <rect key="frame" x="265" y="0.0" width="69" height="34"/>
+                                        <rect key="frame" x="226" y="0.0" width="69" height="34"/>
                                         <color key="backgroundColor" name="AppRed"/>
                                         <accessibility key="accessibilityConfiguration" hint="Moves to the next screen" label="Next"/>
                                         <state key="normal" title="Next"/>
@@ -99,7 +102,7 @@ ideas to reality.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="7Ec-74-Ah9" kind="presentation" id="h1h-zz-1aZ"/>
+                                            <segue destination="7Ec-74-Ah9" kind="presentation" modalPresentationStyle="fullScreen" id="h1h-zz-1aZ"/>
                                         </connections>
                                     </button>
                                 </subviews>

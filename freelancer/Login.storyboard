@@ -132,9 +132,6 @@ Login Now.</string>
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="JOf-KB-MRg" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Qby-is-fTD"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AA-LO-BtP" userLabel="Skip Now" customClass="LinkButton" customModule="freelancer" customModuleProvider="target">
                                         <rect key="frame" x="20" y="58" width="271" height="34"/>
@@ -206,9 +203,6 @@ Login Now.</string>
             <size key="intrinsicContentSize" width="44" height="34"/>
         </designable>
     </designables>
-    <inferredMetricsTieBreakers>
-        <segue reference="Nci-Ri-Sf0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentGrey">
             <color red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

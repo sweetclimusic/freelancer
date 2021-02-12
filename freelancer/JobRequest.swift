@@ -8,7 +8,7 @@
 import Foundation
 
 class JobRequest {
-    private static let baseUrl = "https://mockend.com/sweetclimusic/freelancer/jobs"
+    private static let baseUrl = "https://mockend.com/sweetclimusic/freelancer/post"
     private var decoder: JSONDecoder
 
     var time: Date
